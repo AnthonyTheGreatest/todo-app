@@ -1,4 +1,5 @@
 {
+  "_comment": "https://github.com/vitest-dev/vitest/blob/main/examples/react-testing-lib/tsconfig.json",
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
@@ -13,6 +14,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "types": ["vitest/globals"],
 
     /* Linting */
     "strict": true,
