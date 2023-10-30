@@ -48,6 +48,44 @@ your-app-name
 ├── vite.config.js
 ```
 
+## Tools and technologies used  
+
+Done:  
+
+- Typescript  
+- React  
+- Tailwind  
+- Vite  
+- Vitest  
+- Jsdom  
+- Testing Library  
+- Git  
+- Github  
+- Prettier  
+- Markdown  
+- Degit  
+
+Todo:  
+
+- Github Projects
+- Figma (wireframes)  
+- Docker  
+- React Router  
+- Redux  
+- Cypress  
+- PWA...  
+- Axios  
+- Bored API  
+- Netlify  
+- (multilingual)  
+- (dark mode)  
+
+## Wireframes  
+
+(example)  
+
+![Example Wireframe](./public/Desktop%20-%201.png)
+
 ## License
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
