@@ -1,11 +1,11 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import ExampleApp from './ExampleApp';
+import Root from './Root';
 
-describe('App', () => {
-  it.todo('renders a Subscribe button', () => {
+describe('Root', () => {
+  it.todo('', () => {
     // // Setup
-    // render(<App />);
+    // render(<Root />);
     // // Verify
     // expect(screen.getByRole('button', { name: /subscribe/i })).toBeVisible();
   });
