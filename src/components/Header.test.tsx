@@ -8,8 +8,9 @@ describe("Header", () => {
     render(<Header />);
     // Verify
     expect(screen.getByRole("img", { name: /logo/i })).toBeVisible(); // TODO: set alt text to 'logo'
-    expect(screen.getByText(/Todo/i)).toBeVisible();
-    expect(screen.getByText(/App/i)).toBeVisible();
+    expect(screen.getByText(/todo/i)).toBeVisible();
+    expect(screen.getByText("App")).toBeVisible(); // exact match
+    expect(screen.getByRole("link", { name: /the app/i })).toBeVisible();
     expect(screen.getByRole("link", { name: /about/i })).toBeVisible();
   });
 });

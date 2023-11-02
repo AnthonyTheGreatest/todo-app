@@ -5,10 +5,9 @@ import Footer from "./Footer";
 
 const Root = () => {
   return (
-    <div className="bg-slate-200 h-screen w-screen flex flex-col justify-between">
+    <div className="bg-slate-200 h-screen w-screen flex flex-col justify-between text-slate-900">
       <Header />
       <main className="flex justify-center">
-        <p>main element</p>
         <Outlet />
       </main>
       <Footer />

@@ -1,7 +1,14 @@
 import React from "react";
+import Form from "./Form";
+import List from "./List";
 
 const MainApp = () => {
-  return <div>MainApp</div>;
+  return (
+    <div className="flex">
+      <Form />
+      <List />
+    </div>
+  );
 };
 
 export default MainApp;
