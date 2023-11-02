@@ -17,6 +17,7 @@ fi
 
 # Function for committing with the custom message
 commit() {
+    npx prettier --write ./src
     git add .
     git commit -m "$commit_message"
     git checkout main

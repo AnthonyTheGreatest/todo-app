@@ -17,13 +17,13 @@ npm i
 
 (example)
 
-| Script         | Description                                         |
-| -------------- | --------------------------------------------------- |
-| npm start      | Runs the app in the development mode.               |
-| npm run dev    | Runs the app in the development mode.               |
-| npm run build  | Builds the app for production to the `dist` folder. |
-| npm run serve  | Serves the production build from the `dist` folder. |
-| npm test       | Starts a Jest-like test loop                        |
+| Script        | Description                                         |
+| ------------- | --------------------------------------------------- |
+| npm start     | Runs the app in the development mode.               |
+| npm run dev   | Runs the app in the development mode.               |
+| npm run build | Builds the app for production to the `dist` folder. |
+| npm run serve | Serves the production build from the `dist` folder. |
+| npm test      | Starts a Jest-like test loop                        |
 
 ## Folder Structure
 
@@ -48,41 +48,41 @@ your-app-name
 ├── vite.config.js
 ```
 
-## Tools and technologies used  
+## Tools and technologies used
 
-Done:  
+Done:
 
-- Typescript  
-- React  
-- Tailwind  
-- Vite  
-- Vitest  
-- Jsdom  
-- Testing Library  
-- Git  
-- Github  
-- Prettier  
-- Markdown  
-- Degit  
+- Typescript
+- React
+- Tailwind
+- Vite
+- Vitest
+- Jsdom
+- Testing Library
+- Git
+- Github
+- Prettier
+- Markdown
+- Degit
 
-Todo:  
+Todo:
 
 - Github Projects
-- Figma (wireframes)  
-- Docker  
-- React Router  
-- Redux  
-- Cypress  
-- PWA...  
-- Axios  
-- Bored API  
-- Netlify  
-- (multilingual)  
-- (dark mode)  
+- Figma (wireframes)
+- Docker
+- React Router
+- Redux
+- Cypress
+- PWA...
+- Axios
+- Bored API
+- Netlify
+- (multilingual)
+- (dark mode)
 
-## Wireframes  
+## Wireframes
 
-(example)  
+(example)
 
 ![Example Wireframe](./public/Desktop%20-%201.png)
 
