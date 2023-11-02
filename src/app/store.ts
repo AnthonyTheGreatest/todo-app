@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit/dist/configureStore';
+import { configureStore } from '@reduxjs/toolkit';
 import todoListReducer from '../features/todoListSlice';
 
 export const store = configureStore({
