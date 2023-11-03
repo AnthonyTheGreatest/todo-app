@@ -18,24 +18,27 @@ export const todoListSlice = createSlice({
   name: 'todoList',
   initialState,
   reducers: {
-    addTodo: (state, action: PayloadAction<{ text: string }>) => {
+    addTodo: (
+      state,
+      { payload: { text } }: PayloadAction<{ text: string }>,
+    ) => {
       state.todos.push({
         id: crypto.randomUUID(),
-        text: action.payload.text,
+        text: text,
         checked: false,
       } as Todo);
     },
-    deleteTodo: (state, action: PayloadAction<{ id: string }>) => {
-      state.todos = state.todos.filter(todo => todo.id !== action.payload.id);
+    deleteTodo: (state, { payload: { id } }: PayloadAction<{ id: string }>) => {
+      state.todos = state.todos.filter(todo => todo.id !== id);
     },
     toggleTodo: (
       state,
-      action: PayloadAction<{ id: string; checked: boolean }>,
+      {
+        payload: { id, checked },
+      }: PayloadAction<{ id: string; checked: boolean }>,
     ) => {
       state.todos = state.todos.map(todo =>
-        todo.id === action.payload.id
-          ? { ...todo, checked: action.payload.checked }
-          : todo,
+        todo.id === id ? { ...todo, checked: checked } : todo,
       );
     },
     clearTodos: state => {
