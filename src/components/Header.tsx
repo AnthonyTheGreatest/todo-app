@@ -15,7 +15,9 @@ const Header = () => {
         </div>
       </div>
       <nav className="grow flex justify-end mr-10 text-slate-800 font-bold">
-        <NavLink to="/app">The App</NavLink>
+        <NavLink to="/app" className="whitespace-nowrap">
+          The App
+        </NavLink>
         <NavLink to="/about" className="ml-10">
           About
         </NavLink>

@@ -4,7 +4,7 @@ import List from "./List";
 
 const MainApp = () => {
   return (
-    <div className="flex">
+    <div className="grow flex justify-center items-center">
       <Form />
       <List />
     </div>
