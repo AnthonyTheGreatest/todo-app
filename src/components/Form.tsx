@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+// TODO: Add redux state management.
+
 const Form = ({ addTodo }) => {
   const [newTodo, setNewTodo] = useState('');
 

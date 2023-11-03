@@ -64,14 +64,14 @@ Done:
 - Prettier
 - Markdown
 - Degit
+- Github Projects
+- Figma (wireframes)
+- React Router
+- Redux
 
 Todo:
 
-- Github Projects
-- Figma (wireframes)
 - Docker
-- React Router
-- Redux
 - Cypress
 - PWA...
 - Axios
