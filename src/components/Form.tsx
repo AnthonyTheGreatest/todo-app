@@ -24,7 +24,7 @@ const Form = ({ addTodo }) => {
           id="newTodo"
           autoFocus
           value={newTodo}
-          onChange={(e) => setNewTodo(e.target.value)}
+          onChange={e => setNewTodo(e.target.value)}
           className="bg-slate-200 rounded-lg border border-slate-900"
         />
         <button className="rounded-lg bg-mainColor text-slate-50 px-3">
