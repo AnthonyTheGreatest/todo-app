@@ -1,7 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 export const todoListSlice = createSlice({
-  name: "todoList",
+  name: 'todoList',
   initialState: [],
   reducers: {},
 });

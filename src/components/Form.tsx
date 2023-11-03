@@ -1,15 +1,15 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 const Form = ({ addTodo }) => {
-  const [newTodo, setNewTodo] = useState("");
+  const [newTodo, setNewTodo] = useState('');
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!newTodo) return;
     addTodo(newTodo);
-    setNewTodo("");
+    setNewTodo('');
     // Pre-select after submit:
-    const newTodoInput = document.getElementById("newTodo") as HTMLInputElement;
+    const newTodoInput = document.getElementById('newTodo') as HTMLInputElement;
     newTodoInput && newTodoInput.focus();
   };
 

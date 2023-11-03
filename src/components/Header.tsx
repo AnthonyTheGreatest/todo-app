@@ -1,6 +1,6 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import logo from "/logo.svg";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import logo from '/logo.svg';
 
 // TODO: Replace anchors with react-router elements, fix error.
 
