@@ -6,3 +6,8 @@ export const store = configureStore({
     todoList: todoListReducer,
   },
 });
+
+// Infer the `RootState` and `AppDispatch` types from the store itself
+export type RootState = ReturnType<typeof store.getState>;
+// Inferred type: {todoList: TodoListState}
+export type AppDispatch = typeof store.dispatch;

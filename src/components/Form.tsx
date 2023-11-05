@@ -1,14 +1,21 @@
 import { useState } from 'react';
+import { useAppSelector, useAppDispatch } from '../app/hooks';
+import { addTodo, selectTodoList } from '../features/todoListSlice';
 
-// TODO: Add redux state management.
+//TODO: Fix: only todo id is saved in state.
 
-const Form = ({ addTodo }) => {
+const Form = () => {
   const [newTodo, setNewTodo] = useState('');
+
+  // The `state` arg is correctly typed as `RootState` already
+  // const todoList = useAppSelector(state => state.todoList);
+  // const todoList = useAppSelector(selectTodoList); //?
+  const dispatch = useAppDispatch();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!newTodo) return;
-    addTodo(newTodo);
+    dispatch(addTodo({ text: newTodo }));
     setNewTodo('');
     // Pre-select after submit:
     const newTodoInput = document.getElementById('newTodo') as HTMLInputElement;

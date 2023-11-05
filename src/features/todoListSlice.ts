@@ -1,4 +1,5 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { RootState } from '../app/store';
 
 interface Todo {
   id: string;
@@ -10,14 +11,16 @@ interface TodoListState {
   todos: Todo[];
 }
 
-const initialState: TodoListState = {
+const initialState = {
   todos: [],
-};
+} as TodoListState;
 
 export const todoListSlice = createSlice({
   name: 'todoList',
+  // `createSlice` will infer the state type from the `initialState` argument
   initialState,
   reducers: {
+    // Use the PayloadAction type to declare the contents of `action.payload`
     addTodo: (
       state,
       { payload: { text } }: PayloadAction<{ text: string }>,
@@ -47,16 +50,15 @@ export const todoListSlice = createSlice({
   },
 });
 
-// Selectors
-export const selectTodoList = (state: { todoList: TodoListState }) =>
-  state.todoList;
-export const selectTodoById =
-  (id: string) => (state: { todoList: TodoListState }) => {
-    return state.todoList.todos.find(todo => todo.id === id);
-  };
-
 // Actions
 export const { addTodo, deleteTodo, toggleTodo, clearTodos } =
   todoListSlice.actions;
+
+// Other code such as selectors can use the imported `RootState` type
+// Selectors
+export const selectTodoList = (state: RootState) => state.todoList;
+export const selectTodoById = (id: string) => (state: RootState) => {
+  return state.todoList.todos.find(todo => todo.id === id);
+};
 
 export default todoListSlice.reducer;
