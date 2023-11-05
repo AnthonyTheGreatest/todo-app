@@ -2,8 +2,6 @@ import { useState } from 'react';
 import { useAppSelector, useAppDispatch } from '../app/hooks';
 import { addTodo, selectTodoList } from '../features/todoListSlice';
 
-//TODO: Fix: only todo id is saved in state.
-
 const Form = () => {
   const [newTodo, setNewTodo] = useState('');
 

@@ -14,7 +14,8 @@ const Item = ({ id, text, checked, handleToggle, handleDelete }: ItemProps) => {
         id="checkbox"
         checked={checked}
         onClick={(e: React.MouseEvent<HTMLInputElement>) =>
-          // currentTarget ?
+          // currentTarget:
+          // https://stackoverflow.com/questions/10086427/what-is-the-exact-difference-between-currenttarget-property-and-target-property
           handleToggle(id, e.currentTarget.checked)
         }
       />

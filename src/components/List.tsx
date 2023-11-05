@@ -1,4 +1,3 @@
-import React from 'react';
 import { useAppSelector, useAppDispatch } from '../app/hooks';
 import {
   selectTodoList,
@@ -12,12 +11,12 @@ const List = () => {
   const todoList = useAppSelector(selectTodoList);
   const dispatch = useAppDispatch();
 
-  const handleToggle = (id, checked) => {
-    dispatch(toggleTodo(id, checked));
+  const handleToggle = (id: string, checked: boolean) => {
+    dispatch(toggleTodo({ id, checked }));
   };
 
-  const handleDelete = id => {
-    dispatch(deleteTodo(id));
+  const handleDelete = (id: string) => {
+    dispatch(deleteTodo({ id: id }));
   };
   const handleClear = () => {
     dispatch(clearTodos());
