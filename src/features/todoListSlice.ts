@@ -56,7 +56,7 @@ export const { addTodo, deleteTodo, toggleTodo, clearTodos } =
 
 // Other code such as selectors can use the imported `RootState` type
 // Selectors
-export const selectTodoList = (state: RootState) => state.todoList;
+export const selectTodoList = (state: RootState) => state.todoList.todos;
 export const selectTodoById = (id: string) => (state: RootState) => {
   return state.todoList.todos.find(todo => todo.id === id);
 };
