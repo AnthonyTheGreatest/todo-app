@@ -1,10 +1,18 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '/logo.svg';
+import { useAppSelector } from '../app/hooks';
+import { selectTodoList } from '../features/todoListSlice';
 
-// TODO: Replace anchors with react-router elements, fix error.
+// TODO: Setup localstorage for data persistence.
 
 const Header = () => {
+  // LocalStorage setup for datat persistence
+  const todoList = useAppSelector(selectTodoList);
+  useEffect(() => {
+    localStorage.setItem('todoList', JSON.stringify(todoList));
+  }, [todoList]);
+
   return (
     <header className="flex items-center bg-slate-50 shadow-md">
       <div className="flex items-center ml-10">

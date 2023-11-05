@@ -12,7 +12,11 @@ interface TodoListState {
 }
 
 const initialState = {
-  todos: [],
+  todos: localStorage.getItem('todoList')
+    ? // Get todoList from localStorage if it's not null
+      JSON.parse(localStorage.getItem('todoList') as string)
+    : // Default value:
+      [],
 } as TodoListState;
 
 export const todoListSlice = createSlice({

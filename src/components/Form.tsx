@@ -1,13 +1,10 @@
 import { useState } from 'react';
-import { useAppSelector, useAppDispatch } from '../app/hooks';
-import { addTodo, selectTodoList } from '../features/todoListSlice';
+import { useAppDispatch } from '../app/hooks';
+import { addTodo } from '../features/todoListSlice';
 
 const Form = () => {
   const [newTodo, setNewTodo] = useState('');
 
-  // The `state` arg is correctly typed as `RootState` already
-  // const todoList = useAppSelector(state => state.todoList);
-  // const todoList = useAppSelector(selectTodoList); //?
   const dispatch = useAppDispatch();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
