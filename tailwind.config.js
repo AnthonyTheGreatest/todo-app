@@ -6,6 +6,9 @@ export default {
       colors: {
         mainColor: "#0062d6",
       },
+      fontFamily: {
+        custom: ['Merriweather', 'serif']
+      }
     },
   },
   plugins: [],
