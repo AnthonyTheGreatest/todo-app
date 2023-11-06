@@ -25,10 +25,10 @@ const Form = () => {
   // )
 
   return (
-    <div className="relative h-full flex-auto flex flex-col justify-center m-5 bg-slate-50 shadow-md rounded-xl">
+    <div className="relative h-full flex-1 flex flex-col justify-center m-5 bg-slate-50 shadow-md rounded-xl">
       <form
         onSubmit={handleSubmit}
-        className="h-1/2 flex flex-col justify-evenly"
+        className="absolute top-10 right-16 h-1/2 flex flex-col justify-evenly"
       >
         <label htmlFor="newTodo" className="font-bold text-4xl">
           New Todo

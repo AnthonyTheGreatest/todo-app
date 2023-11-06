@@ -30,8 +30,8 @@ const List = () => {
   // )
 
   return (
-    <div className="relative h-full flex-auto flex flex-col justify-evenly mr-4 my-4 bg-slate-50 shadow-md rounded-xl">
-      <div className="flex-auto flex flex-col justify-center items-center">
+    <div className="relative h-full flex-1 flex flex-col justify-evenly mr-4 my-4 bg-slate-50 shadow-md rounded-xl">
+      <div className="absolute top-10 left-16 flex-auto flex flex-col justify-center items-center">
         <h1 className="font-bold text-4xl">Todo List</h1>
         <div>
           {todoList.length === 0 && <p>No todos.</p>}

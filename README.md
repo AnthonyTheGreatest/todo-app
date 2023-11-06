@@ -68,14 +68,14 @@ Done:
 - Figma (wireframes)
 - React Router
 - Redux
+- Axios
+- Bored API
 
 Todo:
 
 - Docker
 - Cypress
 - PWA...
-- Axios
-- Bored API
 - Netlify
 - (multilingual)
 - (dark mode)

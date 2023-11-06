@@ -4,8 +4,6 @@ import logo from '/logo.svg';
 import { useAppSelector } from '../app/hooks';
 import { selectTodoList } from '../features/todoListSlice';
 
-// TODO: Setup localstorage for data persistence.
-
 const Header = () => {
   // LocalStorage setup for datat persistence
   const todoList = useAppSelector(selectTodoList);
@@ -14,7 +12,7 @@ const Header = () => {
   }, [todoList]);
 
   return (
-    <header className="flex items-center bg-slate-50 shadow-md">
+    <header className="flex items-center bg-slate-50 shadow-md mb-5">
       <div className="flex items-center ml-10">
         <img src={logo} alt="logo" className="w-1/6 my-3" />
         <div className="flex font-bold ml-3 text-2xl">
