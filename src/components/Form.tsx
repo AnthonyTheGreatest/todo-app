@@ -17,9 +17,18 @@ const Form = () => {
     newTodoInput && newTodoInput.focus();
   };
 
+  // return (
+  //   <div className='h-full flex-auto flex justify-center items-center m-5 bg-slate-50 shadow-md rounded-xl' >
+  //     <p>Form</p>
+  //   </div>
+  // )
+
   return (
-    <div className="grow flex flex-col justify-center m-5 bg-slate-50 shadow-md rounded-xl">
-      <form onSubmit={handleSubmit} className="flex flex-col justify-center">
+    <div className="relative h-full flex-auto flex flex-col justify-center m-5 bg-slate-50 shadow-md rounded-xl">
+      <form
+        onSubmit={handleSubmit}
+        className="h-1/2 flex flex-col justify-evenly"
+      >
         <label htmlFor="newTodo" className="font-bold text-4xl">
           New Todo
         </label>
@@ -36,7 +45,7 @@ const Form = () => {
         </button>
       </form>
       <div className="flex justify-end">
-        <button className="rounded-lg bg-mainColor text-slate-50 px-3">
+        <button className="absolute bottom-5 right-5 rounded-lg bg-mainColor text-slate-50 px-3">
           I'm bored...
         </button>
       </div>

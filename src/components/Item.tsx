@@ -8,7 +8,7 @@ interface ItemProps extends Todo {
 
 const Item = ({ id, text, checked, handleToggle, handleDelete }: ItemProps) => {
   return (
-    <li>
+    <li className="list-none my-1">
       <input
         type="checkbox"
         id="checkbox"
@@ -19,8 +19,15 @@ const Item = ({ id, text, checked, handleToggle, handleDelete }: ItemProps) => {
           handleToggle(id, e.currentTarget.checked)
         }
       />
-      <label htmlFor="checkbox">{text}</label>
-      <button onClick={() => handleDelete(id)}>Delete</button>
+      <label htmlFor="checkbox" className="mx-3">
+        {text}
+      </label>
+      <button
+        onClick={() => handleDelete(id)}
+        className="rounded-lg bg-mainColor text-slate-50 px-3"
+      >
+        Delete
+      </button>
     </li>
   );
 };
