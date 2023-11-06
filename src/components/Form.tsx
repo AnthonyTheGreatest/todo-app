@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useAppDispatch } from '../app/hooks';
 import { addTodo } from '../features/todoListSlice';
+import BoredButton from './BoredButton';
 
 const Form = () => {
   const [newTodo, setNewTodo] = useState('');
@@ -45,9 +46,7 @@ const Form = () => {
         </button>
       </form>
       <div className="flex justify-end">
-        <button className="absolute bottom-5 right-5 rounded-lg bg-mainColor text-slate-50 px-3">
-          I'm bored...
-        </button>
+        <BoredButton />
       </div>
     </div>
   );
