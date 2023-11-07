@@ -16,15 +16,26 @@ if [ -z "$commit_message" ]; then
 fi
 
 # Function for committing with the custom message
+# commit() {
+#     npx prettier --write ./src
+#     git add .
+#     git commit -m "$commit_message"
+#     git checkout main
+#     git merge new-branch
+#     git branch -d new-branch
+#     git push
+#     git checkout -b new-branch
+# }
+
+
 commit() {
     npx prettier --write ./src
     git add .
     git commit -m "$commit_message"
     git checkout main
     git merge new-branch
-    git branch -d new-branch
     git push
-    git checkout -b new-branch
+    git checkout new-branch
 }
 
 # Call the commit function

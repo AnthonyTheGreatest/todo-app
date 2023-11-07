@@ -70,13 +70,13 @@ Done:
 - Redux
 - Axios
 - Bored API
+- Netlify
 
 Todo:
 
 - Docker
 - Cypress
 - PWA...
-- Netlify
 - (multilingual)
 - (dark mode)
 
