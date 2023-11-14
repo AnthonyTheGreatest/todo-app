@@ -36,10 +36,10 @@ const Form = () => {
           autoFocus
           value={newTodo}
           onChange={e => setNewTodo(e.target.value)}
-          className="col-start-2 col-span-8 h-12 self-center pl-3 pr-20 bg-slate-200 rounded-lg border border-slate-900"
+          className="col-start-2 col-span-8 h-12 self-center pl-3 pr-20 bg-slate-200 rounded-lg border border-slate-900 text-xl"
         />
-        <div className="-translate-x-[5.5rem]  -translate-y-5 self-center justify-self-center">
-          <button className="px-4 h-10 absolute rounded-lg bg-mainColor text-slate-50">
+        <div className="-translate-x-[5.8rem]  -translate-y-5 self-center justify-self-center">
+          <button className="px-4 h-10 absolute rounded-lg bg-mainColor text-slate-50 text-xl">
             Add
           </button>
         </div>

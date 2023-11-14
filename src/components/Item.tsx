@@ -8,7 +8,7 @@ interface ItemProps extends Todo {
 
 const Item = ({ id, text, checked, handleToggle, handleDelete }: ItemProps) => {
   return (
-    <li className="list-none my-1">
+    <li className="grid justify-center items-center grid-cols-[30px_1fr_30px] list-none my-2">
       <input
         type="checkbox"
         id="checkbox"
@@ -18,13 +18,20 @@ const Item = ({ id, text, checked, handleToggle, handleDelete }: ItemProps) => {
           // https://stackoverflow.com/questions/10086427/what-is-the-exact-difference-between-currenttarget-property-and-target-property
           handleToggle(id, e.currentTarget.checked)
         }
+        className="h-full"
       />
-      <label htmlFor="checkbox" className="mx-3">
+      <label htmlFor="checkbox" className="mx-3 text-xl">
         {text}
       </label>
       <button
         onClick={() => handleDelete(id)}
-        className="rounded-lg bg-mainColor text-slate-50 px-3"
+        className="sm:hidden w-full rounded-lg bg-mainColor text-slate-50 px-3"
+      >
+        x
+      </button>
+      <button
+        onClick={() => handleDelete(id)}
+        className="hidden rounded-lg bg-mainColor text-slate-50"
       >
         Delete
       </button>
