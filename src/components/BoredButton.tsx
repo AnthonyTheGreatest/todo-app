@@ -27,7 +27,7 @@ const BoredButton = () => {
   return (
     <button
       onClick={handleClick}
-      className="absolute bottom-5 right-5 rounded-lg bg-mainColor text-slate-50 px-3"
+      className="rounded-lg bg-mainColor text-slate-50 px-3"
     >
       I'm bored...
     </button>

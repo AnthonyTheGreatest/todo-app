@@ -30,25 +30,23 @@ const List = () => {
   // )
 
   return (
-    <div className="relative h-full flex-1 flex flex-col justify-evenly mr-4 my-4 bg-slate-50 shadow-md rounded-xl">
-      <div className="absolute top-10 left-16 flex-auto flex flex-col justify-center items-center">
-        <h1 className="font-bold text-4xl">Todo List</h1>
-        <div>
-          {todoList.length === 0 && <p>No todos.</p>}
-          {todoList.map(todo => (
-            <Item
-              {...todo}
-              key={todo.id}
-              handleToggle={handleToggle}
-              handleDelete={handleDelete}
-            />
-          ))}
-        </div>
+    <div className="grid grid-rows-[50px_1fr_50px] pt-10 pb-3 bg-slate-50 shadow-md rounded-xl">
+      <h1 className="font-bold text-4xl">Todo List</h1>
+      <div>
+        {todoList.length === 0 && <p>No todos.</p>}
+        {todoList.map(todo => (
+          <Item
+            {...todo}
+            key={todo.id}
+            handleToggle={handleToggle}
+            handleDelete={handleDelete}
+          />
+        ))}
       </div>
       {todoList.length >= 2 && (
         <button
           onClick={handleClear}
-          className="absolute bottom-5 left-5 rounded-lg bg-mainColor text-slate-50 px-3"
+          className="rounded-lg bg-mainColor text-slate-50 px-3"
         >
           Clear Todos
         </button>

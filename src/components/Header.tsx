@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '/logo.svg';
+import down from '/down-arrow.svg';
 import { useAppSelector } from '../app/hooks';
 import { selectTodoList } from '../features/todoListSlice';
 
@@ -12,15 +13,19 @@ const Header = () => {
   }, [todoList]);
 
   return (
-    <header className="flex items-center bg-slate-50 shadow-md mb-5">
-      <div className="flex items-center ml-10">
-        <img src={logo} alt="logo" className="w-1/6 my-3" />
-        <div className="flex font-bold ml-3 text-2xl">
+    <header className="grid grid-cols-[1fr_2fr_1fr] sm:grid-cols-2 justify-center items-center px-4 bg-slate-50 shadow-md">
+      <div className="sm:hidden"></div>
+      <div className="flex justify-self-center sm:justify-self-start">
+        <img src={logo} alt="logo" className="w-14" />
+        <div className="flex items-center ml-2 font-bold text-2xl">
           <p>Todo</p>
           <p className="text-mainColor">App</p>
         </div>
       </div>
-      <nav className="grow flex justify-end mr-10 text-slate-800 font-bold">
+      <div className="justify-self-center sm:hidden">
+        <img src={down} alt="menu" className="w-7" />
+      </div>
+      <nav className="hidden sm:flex sm:justify-end text-slate-800 font-bold">
         <NavLink to="/app" className="whitespace-nowrap">
           The App
         </NavLink>

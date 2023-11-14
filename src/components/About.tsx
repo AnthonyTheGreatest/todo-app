@@ -1,8 +1,8 @@
 const About = () => {
   return (
-    <div className="flex-auto flex justify-center items-center mx-5 bg-slate-50 shadow-md rounded-xl">
+    <main className="grid grid-rows-1 mx-4">
       <p>About</p>
-    </div>
+    </main>
   );
 };
 
