@@ -28,7 +28,7 @@ const List = () => {
         Todo List
       </h1>
       <div className="my-3 mx-3 grid auto-rows-min">
-        {todoList.length === 0 && <p>No todos.</p>}
+        {todoList.length === 0 && <p className="text-xl">No todos.</p>}
         {todoList.map(todo => (
           <Item
             {...todo}

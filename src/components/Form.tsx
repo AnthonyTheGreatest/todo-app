@@ -15,7 +15,9 @@ const Form = () => {
     setNewTodo('');
     // Pre-select after submit:
     const newTodoInput = document.getElementById('newTodo') as HTMLInputElement;
-    newTodoInput && newTodoInput.focus();
+    // only if not on mobile:
+    if (typeof screen.orientation !== 'undefined')
+      newTodoInput && newTodoInput.focus();
   };
 
   return (
