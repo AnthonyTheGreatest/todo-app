@@ -36,11 +36,13 @@ const Form = () => {
           autoFocus
           value={newTodo}
           onChange={e => setNewTodo(e.target.value)}
-          className="col-start-2 col-span-6 h-12 self-center bg-slate-200 rounded-l-lg border border-slate-900"
+          className="col-start-2 col-span-8 h-12 self-center pl-3 pr-20 bg-slate-200 rounded-lg border border-slate-900"
         />
-        <button className="col-start-8 col-span-2 h-12 self-center rounded-r-lg bg-mainColor text-slate-50 px-3">
-          Add
-        </button>
+        <div className="-translate-x-[5.5rem]  -translate-y-5 self-center justify-self-center">
+          <button className="px-4 h-10 absolute rounded-lg bg-mainColor text-slate-50">
+            Add
+          </button>
+        </div>
       </form>
       <div className="self-end">
         <BoredButton />
