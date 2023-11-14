@@ -18,16 +18,16 @@ const Form = () => {
     newTodoInput && newTodoInput.focus();
   };
 
-  // return (
-  //   <div className='h-full flex-auto flex justify-center items-center m-5 bg-slate-50 shadow-md rounded-xl' >
-  //     <p>Form</p>
-  //   </div>
-  // )
-
   return (
-    <div className="grid grid-rows-3 bg-slate-50 shadow-md rounded-xl">
-      <form onSubmit={handleSubmit} className="row-span-2">
-        <label htmlFor="newTodo" className="font-bold text-4xl">
+    <div className="grid grid-rows-3 bg-slate-50 shadow-md rounded-2xl">
+      <form
+        onSubmit={handleSubmit}
+        className="row-span-2 grid grid-rows-2 grid-cols-[repeat(10,_1fr)]"
+      >
+        <label
+          htmlFor="newTodo"
+          className="col-span-10 justify-self-center self-center font-bold text-4xl"
+        >
           New Todo
         </label>
         <input
@@ -36,13 +36,13 @@ const Form = () => {
           autoFocus
           value={newTodo}
           onChange={e => setNewTodo(e.target.value)}
-          className="bg-slate-200 rounded-lg border border-slate-900"
+          className="col-start-2 col-span-6 h-12 self-center bg-slate-200 rounded-l-lg border border-slate-900"
         />
-        <button className="rounded-lg bg-mainColor text-slate-50 px-3">
+        <button className="col-start-8 col-span-2 h-12 self-center rounded-r-lg bg-mainColor text-slate-50 px-3">
           Add
         </button>
       </form>
-      <div className="">
+      <div className="self-end">
         <BoredButton />
       </div>
     </div>

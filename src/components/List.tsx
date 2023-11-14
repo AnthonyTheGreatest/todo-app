@@ -22,15 +22,8 @@ const List = () => {
     dispatch(clearTodos());
   };
 
-  // return (
-  //   <div className="h-full flex-auto flex flex-col items-center justify-center mr-4 my-4 bg-slate-50 shadow-md rounded-xl" >
-  //     <p>List</p>
-  //     <p>some text</p>
-  //   </div>
-  // )
-
   return (
-    <div className="grid grid-rows-[50px_1fr_50px] pt-10 pb-3 bg-slate-50 shadow-md rounded-xl">
+    <div className="grid grid-rows-[50px_1fr_50px] pt-10 pb-3 bg-slate-50 shadow-md rounded-2xl">
       <h1 className="font-bold text-4xl">Todo List</h1>
       <div>
         {todoList.length === 0 && <p>No todos.</p>}

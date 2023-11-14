@@ -5,6 +5,8 @@ import down from '/down-arrow.svg';
 import { useAppSelector } from '../app/hooks';
 import { selectTodoList } from '../features/todoListSlice';
 
+// TODO: Create hamburger menu
+
 const Header = () => {
   // LocalStorage setup for datat persistence
   const todoList = useAppSelector(selectTodoList);
