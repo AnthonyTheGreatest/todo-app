@@ -18,20 +18,20 @@ const Item = ({ id, text, checked, handleToggle, handleDelete }: ItemProps) => {
           // https://stackoverflow.com/questions/10086427/what-is-the-exact-difference-between-currenttarget-property-and-target-property
           handleToggle(id, e.currentTarget.checked)
         }
-        className="h-full"
+        className="h-full accent-mainColor"
       />
       <label htmlFor="checkbox" className="mx-3 text-xl">
         {text}
       </label>
       <button
         onClick={() => handleDelete(id)}
-        className="sm:hidden w-full rounded-lg bg-mainColor text-slate-50 px-3"
+        className="btn sm:hidden w-full rounded-lg px-3"
       >
         x
       </button>
       <button
         onClick={() => handleDelete(id)}
-        className="hidden rounded-lg bg-mainColor text-slate-50"
+        className="btn hidden rounded-lg"
       >
         Delete
       </button>

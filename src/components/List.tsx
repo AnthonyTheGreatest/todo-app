@@ -41,7 +41,7 @@ const List = () => {
       {todoList.length >= 2 && (
         <button
           onClick={handleClear}
-          className="w-40 h-12 justify-self-center self-center rounded-lg bg-mainColor text-slate-50 px-3 text-xl"
+          className="btn w-40 h-12 justify-self-center self-center rounded-lg px-3 text-xl"
         >
           Clear Todos
         </button>

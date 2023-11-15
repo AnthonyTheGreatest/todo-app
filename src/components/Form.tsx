@@ -16,6 +16,8 @@ const Form = () => {
     // Pre-select after submit:
     const newTodoInput = document.getElementById('newTodo') as HTMLInputElement;
     // only if not on mobile:
+    // https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
+    // (?)
     if (typeof screen.orientation !== 'undefined')
       newTodoInput && newTodoInput.focus();
   };
@@ -41,7 +43,7 @@ const Form = () => {
           className="col-start-2 col-span-8 h-12 self-center pl-3 pr-20 bg-slate-200 rounded-lg border border-slate-900 text-xl"
         />
         <div className="-translate-x-[5.8rem]  -translate-y-5 self-center justify-self-center">
-          <button className="px-4 h-10 absolute rounded-lg bg-mainColor text-slate-50 text-xl">
+          <button className="btn px-4 h-10 absolute rounded-lg text-xl">
             Add
           </button>
         </div>

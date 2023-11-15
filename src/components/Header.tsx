@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '/logo.svg';
-import down from '/down-arrow.svg';
 import { useAppSelector } from '../app/hooks';
 import { selectTodoList } from '../features/todoListSlice';
+import HamburgerMenu from './HamburgerMenu';
 
 // TODO: Create hamburger menu
 
@@ -24,9 +24,7 @@ const Header = () => {
           <p className="text-mainColor">App</p>
         </div>
       </div>
-      <div className="justify-self-center sm:hidden">
-        <img src={down} alt="menu" className="w-7" />
-      </div>
+      <HamburgerMenu />
       <nav className="hidden sm:flex sm:justify-end text-slate-800 font-bold">
         <NavLink to="/app" className="whitespace-nowrap">
           The App
