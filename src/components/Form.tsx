@@ -66,7 +66,6 @@ const Form = () => {
         <input
           type="text"
           id="newTodo"
-          autoFocus
           value={newTodo}
           onChange={e => setNewTodo(e.target.value)}
           className="col-start-2 col-span-8 h-12 self-center pl-3 pr-20 bg-slate-200 rounded-lg border border-slate-900 text-xl"
