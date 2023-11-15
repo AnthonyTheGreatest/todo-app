@@ -20,7 +20,7 @@ const HamburgerMenu = () => {
         }
       />
       {isOpen && (
-        <div className="flex flex-col items-center absolute top-20 right-0 text-2xl bg-slate-50 border border-slate-500 border-opacity-90 p-2 z-10 rounded-xl shadow-2xl opacity-90">
+        <div className="flex flex-col items-center absolute top-20 right-0 text-2xl bg-slate-50 border border-slate-400 border-opacity-90 p-2 z-10 rounded-xl shadow-2xl opacity-90">
           <NavLink onClick={toggle} to="/app" className="whitespace-nowrap m-3">
             The App
           </NavLink>
