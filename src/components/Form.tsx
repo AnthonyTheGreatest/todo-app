@@ -30,24 +30,24 @@ const Form = () => {
     <div className="grid grid-rows-3 bg-slate-50 shadow-md rounded-2xl">
       <form
         onSubmit={handleSubmit}
-        className="hidden row-span-2 sm:grid grid-rows-2 grid-cols-[repeat(10,_1fr)]"
+        className="hidden sm:grid row-span-2 grid-rows-2 grid-cols-[1fr_10fr_1fr] "
       >
         <label
           htmlFor="newTodo"
-          className="col-span-10 justify-self-center self-center font-bold text-4xl"
+          className="col-span-3 justify-self-center self-center font-bold text-4xl"
         >
           New Todo
         </label>
-        <input
-          type="text"
-          id="newTodo"
-          autoFocus
-          value={newTodo}
-          onChange={e => setNewTodo(e.target.value)}
-          className="col-start-2 col-span-8 h-12 self-center pl-3 pr-20 bg-slate-200 rounded-lg border border-slate-900 text-xl"
-        />
-        <div className="-translate-x-[5.8rem]  -translate-y-5 self-center justify-self-center">
-          <button className="btn px-4 h-10 absolute rounded-lg text-xl">
+        <div className="col-start-2 relative self-center">
+          <input
+            type="text"
+            id="newTodo"
+            autoFocus
+            value={newTodo}
+            onChange={e => setNewTodo(e.target.value)}
+            className="h-12 w-full pl-3 pr-20 bg-slate-200 rounded-lg border border-slate-900 text-xl"
+          />
+          <button className="absolute top-1 right-1 btn px-4 h-10 rounded-lg text-xl">
             Add
           </button>
         </div>
@@ -55,23 +55,23 @@ const Form = () => {
       {/* for mobile: */}
       <form
         onSubmit={handleSubmitNoSelect}
-        className="sm:hidden row-span-2 grid grid-rows-2 grid-cols-[repeat(10,_1fr)]"
+        className="sm:hidden row-span-2 grid grid-rows-2 grid-cols-[1fr_10fr_1fr] "
       >
         <label
           htmlFor="newTodo"
-          className="col-span-10 justify-self-center self-center font-bold text-4xl"
+          className="col-span-3 justify-self-center self-center font-bold text-4xl"
         >
           New Todo
         </label>
-        <input
-          type="text"
-          id="newTodo"
-          value={newTodo}
-          onChange={e => setNewTodo(e.target.value)}
-          className="col-start-2 col-span-8 h-12 self-center pl-3 pr-20 bg-slate-200 rounded-lg border border-slate-900 text-xl"
-        />
-        <div className="-translate-x-[5.8rem]  -translate-y-5 self-center justify-self-center">
-          <button className="btn px-4 h-10 absolute rounded-lg text-xl">
+        <div className="col-start-2 relative self-center">
+          <input
+            type="text"
+            id="newTodo"
+            value={newTodo}
+            onChange={e => setNewTodo(e.target.value)}
+            className="h-12 w-full pl-3 pr-20 bg-slate-200 rounded-lg border border-slate-900 text-xl"
+          />
+          <button className="absolute top-1 right-1 btn px-4 h-10 rounded-lg text-xl">
             Add
           </button>
         </div>
