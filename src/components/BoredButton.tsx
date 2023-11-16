@@ -10,14 +10,19 @@ const BoredButton = () => {
   const todoList = useAppSelector(selectTodoList);
 
   useEffect(() => {
-    axios
-      .get('https://www.boredapi.com/api/activity?type=recreational')
-      .then(response => {
-        setActivity(response.data.activity);
-      })
-      .catch(error => {
+    // IIFE
+    (async () => {
+      try {
+        const {
+          data: { activity },
+        } = await axios.get(
+          'https://www.boredapi.com/api/activity?type=recreational',
+        );
+        setActivity(activity);
+      } catch (error) {
         console.log(error);
-      });
+      }
+    })();
   }, [todoList]);
 
   const handleClick = () => {
