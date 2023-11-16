@@ -15,9 +15,8 @@ const Header = () => {
   }, [todoList]);
 
   return (
-    <header className="grid grid-cols-[1fr_2fr_1fr] sm:grid-cols-2 justify-center items-center px-4 bg-slate-50 shadow-md">
-      <div className="sm:hidden"></div>
-      <div className="flex justify-self-center sm:justify-self-start">
+    <header className="grid grid-cols-[1fr_2fr_1fr] sm:grid-cols-2 lg:grid-cols-[1fr_512px_512px_1fr] justify-center items-center px-4 bg-slate-50 shadow-md">
+      <div className="flex col-start-2 sm:col-start-1 lg:col-start-2 justify-self-center sm:justify-self-start">
         <img src={logo} alt="logo" className="w-14" />
         <div className="flex items-center ml-2 font-bold text-2xl">
           <p>Todo</p>

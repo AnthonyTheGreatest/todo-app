@@ -4,6 +4,6 @@
 
 @layer base {
   .btn {
-    @apply bg-mainColor text-slate-50 hover:shadow shadow-mainColor hover:brightness-110 transition duration-300;
+    @apply bg-mainColor text-slate-50 hover:shadow-md shadow-mainColor hover:brightness-110 transition duration-300;
   }
 }
